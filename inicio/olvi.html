@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recuperar contraseña</title>
+  <link rel="stylesheet" href="inven.css?v=5" />
+</head>
+<body>
+  <section class="reset-container">
+    <h2>¿Olvidaste tu contraseña?</h2>
+
+    <form id="reset-form" class="reset-form">
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@correo.com" required />
+      </div>
+
+      <div class="campo">
+        <label for="password">Nueva contraseña</label>
+        <input type="password" id="password" placeholder="••••••••" required />
+      </div>
+
+      <div class="campo">
+        <label for="confirm">Confirmar contraseña</label>
+        <input type="password" id="confirm" placeholder="Repite la contraseña" required />
+      </div>
+
+      <div class="acciones">
+        <a href="inicio.html" class="btn-secundario">← Regresar</a>
+        <button type="submit" class="btn-principal">Guardar</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="recuperar.js"></script>
+</body>
+</html>

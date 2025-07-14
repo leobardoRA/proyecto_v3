@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel GSS</title>
+  <link rel="stylesheet" href="inven.css?v=2" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="logo-area">
+      <img src="img/logo1.png" alt="Logo GSS" class="logo" />
+      <span class="titulo">GSS Panel</span>
+    </div>
+
+    <div class="saludo">
+      <h2>¡Hola Leo! <span class="emoji">👋</span></h2>
+      <p>Bienvenido de nuevo</p>
+    </div>
+
+    <a href="inicio.html" class="btn-cerrar">Cerrar sesión</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <ul class="menu">
+           <li><a href="inven.html"><span>📦</span> Inventario</a></li>
+          <li><a href="merma.html"><span>🗑️</span> Merma</a></li>
+          <li><a href="proveedores.html"><span>🚚</span> Proveedores</a></li>
+          <li><a href="cuenta.html"><span>⚙️</span> Editar perfil</a></li>
+          <li><a href="inventario.html"><span>⬅️</span> Atrás</a></li>
+          <li><a href="ayuda.html"><span></span> Ayuda</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="acciones">
+        <a href="inventario.html"><button>Inventario</button></a>
+        <a href="merma.html"><button>Merma</button></a>
+        <button>Proveedores</button>
+        <button id="totalProductos">Total: 6</button>
+      </section>
+
+      <section class="tabla">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Marca</th>
+              <th>Categoría</th>
+              <th>Stock</th>
+              <th>Precio</th>
+              <th>Img</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pepsi 600ml</td>
+              <td>Pepsi</td>
+              <td>Bebidas</td>
+              <td>30</td>
+              <td>$14.00</td>
+              <td><img src="img/Pepsi.png" alt="Pepsi" /></td>
+            </tr>
+            <tr>
+              <td>Pan Bimbo Blanco</td>
+              <td>Bimbo</td>
+              <td>Panadería</td>
+              <td>20</td>
+              <td>$28.00</td>
+              <td><img src="img/Bimbo.png" alt="Bimbo" /></td>
+            </tr>
+            <tr>
+              <td>Sabritas</td>
+              <td>Lala</td>
+              <td>Lácteos</td>
+              <td>25</td>
+              <td>$23.00</td>
+              <td><img src="img/Sabritas.png" alt="Lala" /></td>
+            </tr>
+            <tr>
+              <td>Chetos Flamin'</td>
+              <td>Chetos</td>
+              <td>Snacks</td>
+              <td>15</td>
+              <td>$18.00</td>
+              <td><img src="img/Chetos.png" alt="Chetos" /></td>
+            </tr>
+            <tr>
+              <td>Volt 500ml</td>
+              <td>Volt</td>
+              <td>Bebidas</td>
+              <td>12</td>
+              <td>$16.00</td>
+              <td><img src="img/Volt.png" alt="Volt" /></td>
+            </tr>
+            <tr>
+              <td>Mi Perro Consentido</td>
+              <td>Mi Perro</td>
+              <td>Mascotas</td>
+              <td>8</td>
+              <td>$54.00</td>
+              <td><img src="img/miperroconsentido.png" alt="Croquetas" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="inven.js"></script>
+</body>
+</html>

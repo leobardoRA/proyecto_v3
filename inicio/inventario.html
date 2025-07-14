@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel GSS - Resumen</title>
+  <link rel="stylesheet" href="inven.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="logo-area">
+      <img src="img/logo1.png" alt="Logo GSS" class="logo" />
+      <span class="titulo">GSS Panel</span>
+    </div>
+    <div class="saludo">
+      <h2>¡Hola Leo! <span class="emoji">👋</span></h2>
+      <p>Bienvenido de nuevo</p>
+    </div>
+    <a href="inicio.html" class="btn-cerrar">Cerrar sesión</a>
+  </header>
+
+  <div class="layout">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <nav>
+        <ul class="menu">
+            <li><a href="inven.html"><span>📦</span> Inventario</a></li>
+          <li><a href="merma.html"><span>🗑️</span> Merma</a></li>
+          <li><a href="proveedores.html"><span>🚚</span> Proveedores</a></li>
+          <li><a href="cuenta.html"><span>⚙️</span> Editar perfil</a></li>
+          <li><a href="inventario.html"><span>⬅️</span> Atrás</a></li>
+          <li><a href="ayuda.html"><span></span> Ayuda</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main>
+      <section class="resumen-inventario">
+        <div class="stats">
+          <div class="stat">📦 Productos totales: <strong>614</strong></div>
+          <div class="stat">💰 Valor inventario: <strong>$12,000</strong></div>
+          <div class="stat">⚖️ A granel: <strong>22</strong></div>
+        </div>
+           
+         <div class="buscador-productos">
+            <input type="text" id="busquedaInput" placeholder="🔍 Buscar producto, marca o categoría..." oninput="filtrarProductos()" />
+          </div>
+          
+          <section class="contenido-productos">
+          <div class="marcas">
+            <button class="activa">Todo</button>
+            <button>Barcel</button>
+            <button>Coca Cola</button>
+            <button>Bimbo</button>
+            <button>Sabritas</button>
+            <button>Marinela</button>
+          </div>
+
+        <section class="categorias-scroll">
+          <h4>Categorías</h4>
+          <div class="contenedor-categorias">
+            <div class="categoria">Bebidas</div>
+            <div class="categoria">Snacks y frituras</div>
+            <div class="categoria">Cereales</div>
+            <div class="categoria">Dulces</div>
+            <div class="categoria">Lácteos</div>
+            <div class="categoria">Carnes frías</div>
+            <div class="categoria">Abarrotes secos</div>
+            <div class="categoria">Enlatados y conservas</div>
+            <div class="categoria">Productos de limpieza</div>
+            <div class="categoria">Higiene personal</div>
+            <div class="categoria">Bebé</div>
+            <div class="categoria">Mascotas</div>
+            <div class="categoria">Adifonos 4k rtx 9080</div>
+          </div>
+        </section>
+
+
+          <div class="grid-productos">
+            <div class="producto">
+              <img src="img/coca.png" alt="RC Cola 237ml" />
+              <h5>RC Cola 237ml</h5>
+              <p>Peñafiel — Bebidas</p>
+            </div>
+            <div class="producto">
+              <img src="img/coca.png" alt="Coca Cola 2.5L" />
+              <h5>Coca Cola 2.5L</h5>
+              <p>Coca Cola — Bebidas</p>
+            </div>
+            <div class="producto">
+              <img src="img/Sabritas.png" alt="Ruffles Queso 160g" />
+              <h5>Ruffles Queso 160g</h5>
+              <p>Sabritas — Snacks</p>
+            </div>
+            <div class="producto">
+              <img src="img/Maria.png" alt="Galletas Maria 210g" />
+              <h5>Galletas Maria 210g</h5>
+              <p>Marinela — Dulces</p>
+            </div>
+            <div class="producto">
+              <img src="img/Bimbo.png" alt="Pan Bimbo 620g" />
+              <h5>Pan Bimbo 620g</h5>
+              <p>Bimbo — Panadería</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function filtrarProductos() {
+      const input = document.getElementById('busquedaInput');
+      const filter = input.value.toLowerCase();
+      const productos = document.querySelectorAll('.producto');
+
+      productos.forEach(producto => {
+        const nombre = producto.querySelector('h5').textContent.toLowerCase();
+        const categoria = producto.querySelector('p').textContent.toLowerCase();
+        producto.style.display =
+          nombre.includes(filter) || categoria.includes(filter) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

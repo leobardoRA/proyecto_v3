@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GSS - Iniciar sesión</title>
+  <link rel="stylesheet" href="inven.css?v=1" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Lado izquierdo con logo -->
+    <section class="logo-side">
+      <img src="img/login.png" alt="Logo GSS" />
+    </section>
+
+    <!-- Lado derecho con formulario -->
+    <section class="form-side">
+      <div class="login-content">
+        <h2 class="bienvenida">Bienvenido a GSS</h2>
+        <img src="img/image.png" alt="Avatar de usuario" class="avatar" />
+      </div>
+
+      <form id="login-form" action="inventario.html" method="GET">
+        <div class="grupo">
+          <label for="email" class="etiqueta">Correo electrónico</label>
+          <input type="email" id="email" placeholder="Ingresa tu email" required />
+        </div>
+
+        <div class="grupo">
+            <label for="email" class="etiqueta">contraseña</label>
+          <input type="password" id="password" placeholder="Ingresa tu contraseña" required />
+        </div>
+
+        <div class="acciones-form">
+          <a href="olvi.html" class="forgot">¿Has olvidado la contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-principal">Iniciar sesión</button>
+      </form>
+
+      <div class="enlaces-extra">
+        <a href="registro.html" class="link">Crea una cuenta</a>
+        <a href="ayuda.html" class="link">Ayuda</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
